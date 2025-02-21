@@ -290,7 +290,7 @@ type SingleLegOrder struct {
 	Duration    string `default:"DAY"`
 	Strategy    string `default:"SINGLE"`
 	Instruction string
-	Quantity    float32
+	Quantity    int
 	Instrument  SimpleOrderInstrument
 }
 
@@ -304,7 +304,7 @@ type MultiLegOrder struct {
 
 type SimpleOrderLeg struct {
 	Instruction string
-	Quantity    float32
+	Quantity    int
 	Instrument  SimpleOrderInstrument
 }
 

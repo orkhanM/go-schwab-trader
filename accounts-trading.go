@@ -55,23 +55,23 @@ var (
 	LegTemplate = `
 {
   "instruction": "%s",
-  "quantity": %f,
+  "quantity": %d,
   "instrument": {
     "symbol": "%s",
     "assetType": "%s"
   }
-},
+}
 `
 
 	LegTemplateLast = `
 {
   "instruction": "%s",
-  "quantity": %f,
+  "quantity": %d,
   "instrument": {
     "symbol": "%s",
     "assetType": "%s"
   }
-},
+}
 `
 )
 
@@ -120,7 +120,7 @@ func Instruction(instruction string) SingleLegOrderComposition {
 }
 
 // Set SingleLegOrder.Quantity
-func Quantity(quantity float32) SingleLegOrderComposition {
+func Quantity(quantity int) SingleLegOrderComposition {
 	return func(order *SingleLegOrder) {
 		order.Quantity = quantity
 	}
