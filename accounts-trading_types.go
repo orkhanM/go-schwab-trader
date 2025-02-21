@@ -285,15 +285,6 @@ type FullOrderLeg struct {
 }
 
 type SingleLegOrder struct {
-<<<<<<< Updated upstream
-	OrderType   string `default:"MARKET"`
-	Session     string `default:"NORMAL"`
-	Duration    string `default:"DAY"`
-	Strategy    string `default:"SINGLE"`
-	Instruction string
-	Quantity    int
-	Instrument  SimpleOrderInstrument
-=======
 	OrderType          string     `json:"orderType"`
 	Session            string     `json:"session"`
 	Duration           string     `json:"duration"`
@@ -305,7 +296,6 @@ type OrderLeg struct {
 	Instruction string                `json:"instruction"`
 	Quantity    int                   `json:"quantity"`
 	Instrument  SimpleOrderInstrument `json:"instrument"`
->>>>>>> Stashed changes
 }
 
 type MultiLegOrder struct {

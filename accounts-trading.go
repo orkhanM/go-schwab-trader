@@ -39,40 +39,6 @@ var (
 	// endpointPreviewOrder  string = accountEndpoint + "/accounts/%s/previewOrder"
 	// endpointTransactions string = accountEndpoint + "/accounts/%s/transactions"
 	endpointTransaction string = accountEndpoint + "/accounts/%s/transactions/%s"
-
-	OrderTemplate = `
-{
-  "orderType": "%s",
-  "session": "%s",
-  "duration": "%s",
-  "orderStrategyType": "%s",
-  "orderLegCollection": [
-    %s
-  ]
-}
-`
-
-	LegTemplate = `
-{
-  "instruction": "%s",
-  "quantity": %d,
-  "instrument": {
-    "symbol": "%s",
-    "assetType": "%s"
-  }
-}
-`
-
-	LegTemplateLast = `
-{
-  "instruction": "%s",
-  "quantity": %d,
-  "instrument": {
-    "symbol": "%s",
-    "assetType": "%s"
-  }
-}
-`
 )
 
 // Create a new Market order
