@@ -285,6 +285,7 @@ type FullOrderLeg struct {
 }
 
 type SingleLegOrder struct {
+<<<<<<< Updated upstream
 	OrderType   string `default:"MARKET"`
 	Session     string `default:"NORMAL"`
 	Duration    string `default:"DAY"`
@@ -292,6 +293,19 @@ type SingleLegOrder struct {
 	Instruction string
 	Quantity    int
 	Instrument  SimpleOrderInstrument
+=======
+	OrderType          string     `json:"orderType"`
+	Session            string     `json:"session"`
+	Duration           string     `json:"duration"`
+	Strategy           string     `json:"orderStrategyType"`
+	OrderLegCollection []OrderLeg `json:"orderLegCollection"`
+}
+
+type OrderLeg struct {
+	Instruction string                `json:"instruction"`
+	Quantity    int                   `json:"quantity"`
+	Instrument  SimpleOrderInstrument `json:"instrument"`
+>>>>>>> Stashed changes
 }
 
 type MultiLegOrder struct {
@@ -309,8 +323,8 @@ type SimpleOrderLeg struct {
 }
 
 type SimpleOrderInstrument struct {
-	Symbol    string
-	AssetType string // EQUITY
+	Symbol    string `json:"symbol"`
+	AssetType string `json:"assetType"`
 }
 
 type (
